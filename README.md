@@ -52,6 +52,7 @@ This repo, named **SkyReels-A2**, contains the official PyTorch implementation o
 
 ## 🎉 News
 
+- [x] Apr 7, 2025: 🔥 [ComfyUI](https://github.com/Yuan-ManX/ComfyUI-SkyReels-A2) is now available.
 - [x] Apr 3, 2025: 🔥 We release pre-view version of checkpoints, code of model inference, preprocessing, and gradio demos.
 - [x] Previously, we released [SkyReels-A1](https://github.com/SkyworkAI/SkyReels-A1). This is an open-sourced and effective framework for portrait image animation.
 
