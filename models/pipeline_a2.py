@@ -428,7 +428,7 @@ class A2Pipeline(DiffusionPipeline, WanLoraLoaderMixin):
         mask_lat_size[:, :, list(range(1, num_frames))] = 0
         first_frame_mask = mask_lat_size[:, :, 0:1]
         if len(image_vae) == 1:
-            first_frame_mask = torch.repeat_interleave(first_frame_mask, dim=2, repeats=self.vae_scale_factor_temporal+4)
+            first_frame_mask = torch.repeat_interleave(first_frame_mask, dim=2, repeats=self.vae_scale_factor_temporal)
             mask_lat_size = torch.concat([first_frame_mask, mask_lat_size[:, :, 1:, :]], dim=2)
         elif len(image_vae) == 2:
             first_frame_mask = torch.repeat_interleave(first_frame_mask, dim=2, repeats=self.vae_scale_factor_temporal+4)
