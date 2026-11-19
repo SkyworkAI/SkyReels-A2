@@ -3,7 +3,9 @@ from PIL import Image
 from moviepy.video.io.ImageSequenceClip import ImageSequenceClip
 
 def _crop_and_resize_pad(image, height=480, width=720):
-    image = np.array(image)
+    if not isinstance(image, Image.Image):
+        image = Image.fromarray(image)
+    image = np.array(image.convert("RGB"))
     image_height, image_width, _ = image.shape
     if image_height / image_width < height / width:
         pad = int((((height / width) * image_width) - image_height) / 2.)
